@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue-200: hsl(215, 51%, 70%);
+  --cyan-400: hsl(178, 100%, 50%);
+
+  --dark-blue-900-M-bg: hsl(217, 54%, 11%);
+  --dark-blue-800-C-bg: hsl(216, 50%, 16%);
+  --dark-blue-700-line: hsl(215, 32%, 27%);
+  --white-100: hsl(0, 0%, 100%);
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue-900-M-bg);
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GLOBAL */
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 2rem 1rem;
+  padding: 20px;
+  background-color: var(--dark-blue-800-C-bg);
+  border-radius: 15px;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.75);
+}
+
+/* IMAGES */
+.img__top {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img__top:hover .img__overlay {
+  display: block;
+}
+
+.img__top img {
+  width: 100%;
+  display: block;
+}
+
+.img__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: none;
+  cursor: pointer;
+}
+
+.img__overlay img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CONTENT */
+.title {
+  font-size: 21px;
+  font-weight: var(--fw-bold);
+  display: inline-block;
+  padding: 16px 0;
+}
+
+p {
+  color: var(--soft-blue-200);
+  font-weight: var(--fw-light);
+  font-size: 14px;
+}
+
+.description {
+  font-weight: var(--fw-light);
+  line-height: 1.7;
+}
+
+.card__content a {
+  text-decoration: none;
+  color: var(--white-100);
+}
+
+.card__content a:hover {
+  color: var(--cyan-400);
+}
+
+.card__flex {
+  padding: 10px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dark-blue-700-line);
+}
+
+.eth,
+.days {
+  display: flex;
+  align-items: center;
+}
+
+.eth p,
+.days p {
+  margin-left: 6px;
+}
+
+.eth p {
+  color: var(--cyan-400);
+  font-weight: var(--fw-bold);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--white-100);
+  margin-right: 20px;
+}
